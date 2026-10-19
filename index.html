@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>塔什干晨报 · 每日观察 2026-10-19</title>
+  <style>
+    :root {
+      --primary: #0F4C81;
+      --primary-light: #EBF3FA;
+      --accent: #C5A059;
+      --accent-light: #FEF9EE;
+      --text-main: #1E293B;
+      --text-muted: #64748B;
+      --border-color: #E2E8F0;
+      --bg-card: #FFFFFF;
+      --bg-page: #F8FAFC;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: var(--bg-page);
+      color: var(--text-main);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      line-height: 1.6;
+      padding: 20px 12px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 680px;
+      background: #FFFFFF;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      overflow: hidden;
+      border: 1px solid var(--border-color);
+    }
+
+    .header-banner {
+      background: linear-gradient(135deg, #0F4C81 0%, #1E3A8A 100%);
+      color: #FFFFFF;
+      padding: 28px 24px 22px;
+      position: relative;
+    }
+    .header-tag {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      background: rgba(255, 255, 255, 0.15);
+      padding: 3px 8px;
+      border-radius: 4px;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+    .header-title {
+      font-size: 24px;
+      font-weight: 800;
+      line-height: 1.25;
+      margin-bottom: 8px;
+      letter-spacing: -0.5px;
+    }
+    .header-subtitle {
+      font-size: 13px;
+      color: #CBD5E1;
+      margin-bottom: 16px;
+    }
+    
+    .widgets-bar {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(8px);
+      padding: 10px 14px;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      font-size: 12px;
+    }
+    .widget-item strong { color: #F8FAFC; display: block; font-size: 13px; }
+    .widget-item span { color: #CBD5E1; font-size: 11px; }
+
+    .content-body {
+      padding: 20px 20px;
+    }
+
+    .glance-box {
+      background: var(--primary-light);
+      border-left: 4px solid var(--primary);
+      padding: 14px 16px;
+      border-radius: 0 8px 8px 0;
+      margin-bottom: 24px;
+    }
+    .glance-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .glance-list {
+      list-style: none;
+      font-size: 13px;
+      color: #334155;
+    }
+    .glance-list li {
+      margin-bottom: 6px;
+      position: relative;
+      padding-left: 14px;
+    }
+    .glance-list li:last-child { margin-bottom: 0; }
+    .glance-list li::before {
+      content: "•";
+      color: var(--primary);
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 26px 0 14px;
+      padding-bottom: 8px;
+      border-bottom: 1.5px solid var(--border-color);
+    }
+    .section-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .section-title::before {
+      content: "";
+      display: inline-block;
+      width: 4px;
+      height: 16px;
+      background: var(--primary);
+      border-radius: 2px;
+    }
+    .section-badge {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--text-muted);
+      background: var(--bg-page);
+      padding: 2px 8px;
+      border-radius: 12px;
+      border: 1px solid var(--border-color);
+    }
+
+    .news-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 14px 16px;
+      margin-bottom: 12px;
+      transition: all 0.2s ease;
+    }
+    .card-meta {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 6px;
+    }
+    .chip {
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 4px;
+      text-transform: uppercase;
+    }
+    .chip-blue { background: #E0E7FF; color: #3730A3; }
+    .chip-green { background: #D1FAE5; color: #065F46; }
+    .chip-purple { background: #EDE9FE; color: #5B21B6; }
+    .chip-orange { background: #FFEDD5; color: #9A3412; }
+
+    .news-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text-main);
+      line-height: 1.4;
+      margin-bottom: 6px;
+    }
+    .news-desc {
+      font-size: 13px;
+      color: #475569;
+      line-height: 1.55;
+    }
+    .news-takeaway {
+      margin-top: 8px;
+      background: var(--accent-light);
+      border-left: 3px solid var(--accent);
+      padding: 6px 10px;
+      font-size: 12px;
+      color: #78350F;
+      border-radius: 0 4px 4px 0;
+    }
+
+    .lang-card {
+      background: #FAFAFA;
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      padding: 16px;
+      margin-bottom: 16px;
+    }
+    .lang-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    .lang-label {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .lang-sentence {
+      font-size: 16px;
+      font-weight: 700;
+      color: #0F172A;
+      margin-bottom: 4px;
+      font-family: Georgia, serif;
+    }
+    .lang-trans {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+      padding-bottom: 10px;
+      border-bottom: 1px dashed var(--border-color);
+    }
+    .lang-block {
+      margin-top: 8px;
+    }
+    .lang-block-title {
+      font-size: 11px;
+      font-weight: 700;
+      color: #475569;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .grammar-content {
+      font-size: 12px;
+      color: #334155;
+      background: #FFFFFF;
+      padding: 8px 10px;
+      border-radius: 6px;
+      border: 1px solid #EDF2F7;
+      line-height: 1.6;
+    }
+    .vocab-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12px;
+      margin-top: 6px;
+      background: #FFFFFF;
+      border-radius: 6px;
+      overflow: hidden;
+      border: 1px solid #EDF2F7;
+    }
+    .vocab-table th, .vocab-table td {
+      padding: 6px 10px;
+      text-align: left;
+      border-bottom: 1px solid #F1F5F9;
+    }
+    .vocab-table th {
+      background: #F8FAFC;
+      color: #64748B;
+      font-weight: 600;
+      font-size: 11px;
+    }
+    .vocab-word {
+      font-weight: 700;
+      color: var(--primary);
+      font-family: monospace;
+    }
+
+    .footer-bar {
+      margin-top: 30px;
+      padding: 16px;
+      background: #F1F5F9;
+      border-radius: 8px;
+      text-align: center;
+      font-size: 11px;
+      color: #64748B;
+    }
+    .footer-bar strong { color: #334155; }
+
+    .copy-btn-bar {
+      padding: 12px 20px;
+      background: #F8FAFC;
+      border-top: 1px solid var(--border-color);
+      display: flex;
+      justify-content: flex-end;
+    }
+    .copy-btn {
+      background: var(--primary);
+      color: #FFFFFF;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .copy-btn:hover { background: #0c3d69; }
+  </style>
+</head>
+<body>
+
+  <div class="container" id="wechat-content">
+    
+    <header class="header-banner">
+      <div class="header-tag">Tashkent Daily Briefing · 每日观察</div>
+      <h1 class="header-title">中亚与全球前沿每日资讯</h1>
+      <div class="header-subtitle">2026年10月19日 · 聚焦乌兹要闻 / 开源前沿 / 语言学习 · 聚焦乌兹要闻 / 开源前沿 / 语言学习</div>
+
+      <div class="widgets-bar">
+        <div class="widget-item">
+          <strong>塔什干天气 · METEO</strong>
+          <span>晴 15°C / 体感 12°C (风速 6 km/h)</span>
+        </div>
+        <div class="widget-item">
+          <strong>官方与离岸汇率 · FX RATES</strong>
+          <span>USD/UZS: 12055.90 | CNY/UZS: 1803.07<br>USD/CNY: 6.7208 (PBOC中间价) / 6.6837 (离岸)</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="content-body">
+      
+      <div class="glance-box">
+        <div class="glance-title">30秒今日极简速览 · GLANCE</div>
+        <ul class="glance-list">
+          
+          <li><strong>乌兹别克斯坦：</strong>全国人口突破 3950 万，一年增长近 70 万人，年轻劳动力红利持续释放。</li>
+          <li><strong>开源 AI 爆火：</strong><code>ai-job-search</code> 与 <code>ruflo</code> 登顶 GitHub Trending，Agent 从单体走向集群协作。</li>
+          <li><strong>全网热搜：</strong>多措并举推进银发经济，年轻人流行“轻量化生活”，TikTok 掀起无滤镜 #JobLife 职场纪实。</li>
+    
+        </ul>
+      </div>
+
+      <!-- 第一板块：乌兹别克斯坦本地资讯 -->
+      <div class="section-header">
+        <div class="section-title">乌兹别克斯坦 · 本地动态</div>
+        <span class="section-badge">UZBEKISTAN NEWS</span>
+      </div>
+      
+      <article class="news-card">
+        <div class="card-meta">
+          <span class="chip chip-blue">人口趋势</span>
+          <span style="font-size: 11px; color: var(--text-muted);">2026-10-19</span>
+        </div>
+        <div class="news-title">乌兹别克斯坦总人口突破 3950 万大关</div>
+        <div class="news-desc">国家统计署最新统计显示，过去一年全国人口净增近 70 万人，增速在中亚居首。持续扩张的年轻人口结构正在为该国制造业、建筑业及数字消费市场提供充足的劳动力支撑。</div>
+      </article>
+
+      <article class="news-card">
+        <div class="card-meta">
+          <span class="chip chip-blue">金融民生</span>
+          <span style="font-size: 11px; color: var(--text-muted);">2026-10-19</span>
+        </div>
+        <div class="news-title">Google Pay 服务在乌兹别克斯坦正式上线运营</div>
+        <div class="news-desc">当地多家商业银行已全面接入 Google Wallet / Google Pay 移动无感支付生态。这是继万事达与 Visa 普及后，乌国数字无现金支付基础设施的又一关键补强。</div>
+      </article>
+
+      <article class="news-card">
+        <div class="card-meta">
+          <span class="chip chip-blue">能源战略</span>
+          <span style="font-size: 11px; color: var(--text-muted);">2026-10-18</span>
+        </div>
+        <div class="news-title">总统米尔济约耶夫规划乌国第二及第三座核电站建设</div>
+        <div class="news-desc">为支撑 2030 年工业化用电峰值，乌兹别克斯坦计划加快核能与 4.5GW 储能系统落地，进一步降低对传统天然气发电的单点依赖。</div>
+      </article>
+    
+
+      <!-- 第二板块：GitHub 热门 AI 项目简述 -->
+      <div class="section-header">
+        <div class="section-title">GitHub 热门 AI 项目精选</div>
+        <span class="section-badge">GITHUB TRENDING</span>
+      </div>
+      
+      <article class="news-card">
+        <div class="card-meta">
+          <span class="chip chip-purple">Agent 应用</span>
+          <span class="chip chip-orange">Star 56.1k</span>
+        </div>
+        <div class="news-title">MadsLorentzen / ai-job-search</div>
+        <div class="news-desc"><strong>核心功能：</strong>完全运行在本地机器上的 AI 求职框架。基于 Claude Code 驱动，能自动评估岗位匹配度、根据公司文化动态定制专属 CV、撰写高匹配求职信并生成面试模拟题。</div>
+        <div class="news-takeaway"><strong>KEY TAKEAWAY：</strong>开箱即用，把繁琐的重复性应聘与文书包装变成了全自动化流水线，今日新增 Star +3,860。</div>
+      </article>
+
+      <article class="news-card">
+        <div class="card-meta">
+          <span class="chip chip-purple">集群框架</span>
+          <span class="chip chip-orange">Star 76.9k</span>
+        </div>
+        <div class="news-title">ruvnet / ruflo (The original agent harness)</div>
+        <div class="news-desc"><strong>核心功能：</strong>专为多智能体（Multi-Player Swarms）设计的 Harness 运行时调度编排底座。内置自适应记忆、联邦网络协同及向量 RAG，原生兼容 Claude Code、Codex 及各类终端 Agent。</div>
+        <div class="news-takeaway"><strong>KEY TAKEAWAY：</strong>解决多 Agent 并发协同中的上下文爆炸与状态冲突，是目前构建自主 Agent 流水线最热门的底座之一。</div>
+      </article>
+
+      <article class="news-card">
+        <div class="card-meta">
+          <span class="chip chip-purple">Prompt/Token 压缩</span>
+          <span class="chip chip-orange">Star 76.1k</span>
+        </div>
+        <div class="news-title">headroomlabs-ai / headroom</div>
+        <div class="news-desc"><strong>核心功能：</strong>在大模型接收输入前，自动智能压缩命令行输出日志、文件和 RAG 分块。实测能为 Coding Agent 减少 20% Token 消耗，JSON 结构化数据压缩率高达 60%~95%，且不损失问答质量。</div>
+      </article>
+    
+
+      <!-- 第三板块：国内与全球社交热点 (微博 / 知乎 / 抖音 / TikTok 聚合) -->
+      <div class="section-header">
+        <div class="section-title">全网热点聚焦 · 社交热搜观察</div>
+        <span class="section-badge">TRENDING TOPICS</span>
+      </div>
+      
+      <article class="news-card">
+        <div class="card-meta">
+          <span class="chip chip-orange">微博热搜</span>
+          <span style="font-size: 11px; color: var(--text-muted);">热度 122万 · 政策民生</span>
+        </div>
+        <div class="news-title">多措并举推动银发经济提质升级</div>
+        <div class="news-desc">国家层面出台专项统筹举措，聚焦适老化改造、康养旅居及老年助餐等重点领域。随着 60 岁以上人口结构深化，银发产业正从传统兜底保障全面转向万亿级品质消费市场。</div>
+      </article>
+
+      <article class="news-card">
+        <div class="card-meta">
+          <span class="chip chip-blue">知乎热榜</span>
+          <span style="font-size: 11px; color: var(--text-muted);">热度 742万 · 青年文化</span>
+        </div>
+        <div class="news-title">年轻人流行“轻量化生活”，断舍离与数字极简成新共识</div>
+        <div class="news-desc">知乎高赞讨论集中在“低负担资产配置”与“精神减负”。从精简不必要的社交应用，到减少盲目囤积消费，越来越多人开始追求生活和工作表面的纯粹与低阻力运转。</div>
+      </article>
+
+      <article class="news-card">
+        <div class="card-meta">
+          <span class="chip chip-purple">抖音热点</span>
+          <span style="font-size: 11px; color: var(--text-muted);">播放 2.3亿 · 城市生活</span>
+        </div>
+        <div class="news-title">低碳夜骑与户外休闲新路线席卷全国多个重点城市</div>
+        <div class="news-desc">各地多条滨水绿道和城市专用骑行道在社交平台持续刷屏，不仅带动了运动装备与夜间消费，也成为年轻人下班后低成本解压与社交的首选健康生活方式。</div>
+      </article>
+
+      <article class="news-card">
+        <div class="card-meta">
+          <span class="chip chip-green">TikTok 趋势</span>
+          <span style="font-size: 11px; color: var(--text-muted);">海外热榜 · 职场生态</span>
+        </div>
+        <div class="news-title">#JobLife 真实职场记录热潮：告别精致滤镜，主打真实透明</div>
+        <div class="news-desc">TikTok 全球热榜上，创作者们不再展示经过精美剪辑的精英日常，而是真实记录一线工作的挑战、时间管理痛点与平衡技巧，引发全球年轻工薪阶层强烈共鸣与探讨。</div>
+      </article>
+    
+
+      <!-- 第四板块：双语精进与语法精析 -->
+      <div class="section-header">
+        <div class="section-title">双语精讲 · 语法与生词拆解</div>
+        <span class="section-badge">DAILY LANGUAGE</span>
+      </div>
+
+      <!-- 乌兹语精讲卡片 -->
+      <div class="lang-card">
+        <div class="lang-header">
+          <span class="lang-label"><span class="chip chip-blue" style="font-size:11px; letter-spacing:0.5px;">UZBEK</span> 实用乌兹语</span>
+          <span class="chip chip-blue">职场口语 / 协作</span>
+        </div>
+        <div class="lang-sentence">Iltimos, hujjatlarni ko‘rib chiqing va tasdiqlang.</div>
+        <div class="lang-trans">中文翻译：请查阅并确认这些文件。</div>
+        
+        <div class="lang-block">
+          <div class="lang-block-title">语法拆解 · GRAMMAR BREAKDOWN</div>
+          <div class="grammar-content">
+            
+      • <strong>Iltimos</strong>：副词/礼貌词，意为“请”。<br>
+      • <strong>hujjat-lar-ni</strong>：名词 <code>hujjat</code> (文件) + 复数后缀 <code>-lar</code> + <strong>指格(宾格)后缀 <code>-ni</code></strong>，充当动作的直接宾语（特指这些文件）。<br>
+      • <strong>ko‘rib chiqing</strong>：动词短语。由 <code>ko‘rmoq</code> (看) 副动词形式 <code>ko‘rib</code> + 助动词 <code>chiqmoq</code> 构成体貌助动词结构，表示“完整过一遍/审阅完”；加敬语祈使后缀 <code>-ing</code>。<br>
+      • <strong>va</strong>：连词“和/并”。<br>
+      • <strong>tasdiqlang</strong>：动词 <code>tasdiqlamoq</code> (确认/批准) 的敬语祈使形（去掉 -moq 加 <code>-ng</code>）。
+    
+          </div>
+        </div>
+
+        <div class="lang-block">
+          <div class="lang-block-title">核心生词 · VOCABULARY</div>
+          <table class="vocab-table">
+            <thead>
+              <tr><th>单词</th><th>词性</th><th>释义</th></tr>
+            </thead>
+            <tbody>
+              
+      <tr><td class="vocab-word">hujjat</td><td>n.</td><td>文件、凭单、单证</td></tr>
+      <tr><td class="vocab-word">ko‘rib chiqmoq</td><td>v.</td><td>仔细审查、查阅、过目</td></tr>
+      <tr><td class="vocab-word">tasdiqlamoq</td><td>v.</td><td>确认、批准、核准</td></tr>
+    
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- 商务英语精讲卡片 -->
+      <div class="lang-card">
+        <div class="lang-header">
+          <span class="lang-label"><span class="chip chip-purple" style="font-size:11px; letter-spacing:0.5px;">ENGLISH</span> 商务英语</span>
+          <span class="chip chip-purple">商务沟通 / 进度对齐</span>
+        </div>
+        <div class="lang-sentence">We need to streamline the approval workflow to mitigate potential bottlenecks.</div>
+        <div class="lang-trans">中文翻译：我们需要精简审批流程，以消除潜在的进度瓶颈。</div>
+
+        <div class="lang-block">
+          <div class="lang-block-title">句型与用法解析 · USAGE & STRUCTURE</div>
+          <div class="grammar-content">
+            
+      • <strong>句型结构</strong>：主谓宾复合句。主干为 <code>We need to streamline [object]</code>，后接不定式短语 <code>to mitigate...</code> 充当目的状语。<br>
+      • <strong>地道搭配</strong>：<code>streamline ... workflow</code> 是外企和商务管理中极高频的地道用语，专门指“简化优化繁琐流程/去臃肿化”；<code>mitigate bottlenecks</code> 比单纯用 <code>solve problems</code> 更具专业管理质感。
+    
+          </div>
+        </div>
+
+        <div class="lang-block">
+          <div class="lang-block-title">核心词汇 · KEY VOCABULARY</div>
+          <table class="vocab-table">
+            <thead>
+              <tr><th>词汇 / 短语</th><th>音标</th><th>词性</th><th>商务释义与场景</th></tr>
+            </thead>
+            <tbody>
+              
+      <tr><td class="vocab-word">streamline</td><td style="color:#64748B; font-family:serif;">/ˈstriːmlaɪn/</td><td>v.</td><td>精简、简化以提高效率 (流线化)</td></tr>
+      <tr><td class="vocab-word">mitigate</td><td style="color:#64748B; font-family:serif;">/ˈmɪtɪɡeɪt/</td><td>v.</td><td>缓解、减轻 (风险/损失/影响)</td></tr>
+      <tr><td class="vocab-word">bottleneck</td><td style="color:#64748B; font-family:serif;">/ˈbɒtlnek/</td><td>n.</td><td>瓶颈、卡脖子环节、阻塞点</td></tr>
+    
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bar">
+      <strong>天机 · 每日简报 (Tashkent Briefing)</strong><br>
+      生成时间：2026-10-19 23:22 (Asia/Tashkent) · 数据源自 Open-Meteo / CBU / Kun.uz / GitHub / 全网热搜
+    </div>
+
+    <div class="copy-btn-bar">
+      <button class="copy-btn" onclick="copyForWechat()">📋 一键复制公众号排版富文本</button>
+    </div>
+
+  </div>
+
+  <script>
+    function copyForWechat() {
+      const container = document.getElementById('wechat-content');
+      const range = document.createRange();
+      range.selectNode(container);
+      window.getSelection().removeAllRanges();
+      window.getSelection().addRange(range);
+      try {
+        document.execCommand('copy');
+        alert('✅ 已成功复制富文本！可直接粘贴至微信公众号编辑器或微信对话框。');
+      } catch (err) {
+        alert('复制失败，请直接使用 Ctrl+A 全选并 Ctrl+C 复制。');
+      }
+      window.getSelection().removeAllRanges();
+    }
+  </script>
+</body>
+</html>
