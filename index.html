@@ -180,6 +180,7 @@
     .chip-green { background: #D1FAE5; color: #065F46; }
     .chip-purple { background: #EDE9FE; color: #5B21B6; }
     .chip-orange { background: #FFEDD5; color: #9A3412; }
+    .chip-red { background: #FEE2E2; color: #991B1B; }
 
     .news-title {
       font-size: 15px;
@@ -330,7 +331,7 @@
       <div class="widgets-bar">
         <div class="widget-item">
           <strong>塔什干天气 · METEO</strong>
-          <span>多云 6.3°C / 体感 3.0°C (风速 12.2 km/h)</span>
+          <span>多云 5.7°C / 体感 1.9°C (风速 13.2 km/h)</span>
         </div>
         <div class="widget-item">
           <strong>官方与离岸汇率 · FX RATES</strong>
@@ -344,9 +345,9 @@
       <div class="glance-box">
         <div class="glance-title">30秒今日极简速览 · GLANCE</div>
         <ul class="glance-list">
-          <li>乌兹焦点：塔什干机场暂停未在本地网络使用过的新手机及设备海关清关，凭记录临时扣留待恢复后返还。</li>
-<li>开源AI焦点：长任务Agent编排、类型安全Agent框架与上下文压缩工具活跃，工程化重心转向运行时和成本治理。</li>
-<li>社交科技热点：本次数据源未提供微博/知乎/抖音/TikTok一手热搜数据，暂不作推断。</li>
+          <li>速览1（乌兹焦点）：塔什干机场暂停未在本地网络使用过的新手机海关手续，设备将凭记录临时扣留、程序恢复后返还。</li>
+<li>速览2（开源AI焦点）：多智能体CLI、本地视频编辑MCP、自进化上下文数据库与Agent基础设施项目活跃，企业级编排加速。</li>
+<li>速览3（社交科技热点）：微博关注公益拍卖款项去向，知乎聚焦银行短信取消致近26万元消失，推特WANDA趋势升温。</li>
 
         </ul>
       </div>
@@ -363,16 +364,16 @@
           <span style="font-size: 11px; color: var(--text-muted);">2026-11-11</span>
         </div>
         <div class="news-title">塔什干机场暂停新手机清关</div>
-        <div class="news-desc">乌兹别克斯坦海关委员会通报，塔什干机场暂停对未在本地运营商网络使用过的新手机及设备办理海关手续；相关设备将凭记录临时扣留，待流程恢复后返还。影响入境携带新机与电子设备通关时效，旅客需预留通关时间。</div>
+        <div class="news-desc">乌兹别克斯坦海关委员会通报，塔什干机场暂停为未在乌本地运营商网络使用过的新手机及设备办理海关手续；相关设备将凭记录临时扣留，待程序恢复后返还。具体恢复时间与适用范围仍待明确。</div>
       </article>
 
       <article class="news-card">
         <div class="card-meta">
-          <span class="chip chip-blue">国际动态</span>
+          <span class="chip chip-blue">国际安全</span>
           <span style="font-size: 11px; color: var(--text-muted);">2026-11-11</span>
         </div>
-        <div class="news-title">保加利亚86车连环相撞致11死</div>
-        <div class="news-desc">保加利亚发生两起重大交通事故，共造成11人死亡、48人受伤；其中一起涉及86辆车的连环相撞，初步原因指向突发浓雾。事故凸显恶劣天气下高速公路限速、预警与多车事故应急管理的重要性。</div>
+        <div class="news-title">保加利亚发生86车连环车祸</div>
+        <div class="news-desc">保加利亚发生两起重大交通事故，共造成11人死亡、48人受伤，其中一起涉及86辆汽车。初步原因指向突发浓雾；大规模连环相撞凸显低能见度条件下高速公路预警与交通管制的重要性。</div>
       </article>
 
       <article class="news-card">
@@ -380,8 +381,8 @@
           <span class="chip chip-blue">宏观经贸</span>
           <span style="font-size: 11px; color: var(--text-muted);">2026-11-11</span>
         </div>
-        <div class="news-title">央行称食糖配额通胀风险有限</div>
-        <div class="news-desc">乌兹别克斯坦央行副行长阿奇洛夫表示，监管方未看到食糖进口配额带来较大通胀风险，并预计2027年食品价格涨幅放缓；但他未说明30万吨食糖进口配额对价格的影响及是否与央行讨论。</div>
+        <div class="news-title">央行评估食糖进口配额影响</div>
+        <div class="news-desc">乌兹别克斯坦央行副行长阿奇洛夫表示，食糖方面不存在较大通胀风险，预计2027年食品价格涨势放缓；但他未说明30万吨食糖进口配额如何影响价格，以及该措施是否与央行讨论。</div>
       </article>
 
       <!-- 第二板块：GitHub 热门 AI 项目简述 -->
@@ -392,32 +393,32 @@
       
       <article class="news-card">
         <div class="card-meta">
-          <span class="chip chip-purple">数据集成/ELT</span>
-          <span class="chip chip-orange">Star 22.4k</span>
+          <span class="chip chip-purple">多智能体CLI</span>
+          <span class="chip chip-orange">Star 3.6k</span>
         </div>
-        <div class="news-title">airbytehq/airbyte</div>
-        <div class="news-desc"><strong>核心功能：</strong>开源数据移动平台，面向ELT管道与AI Agent，从API、数据库和文件抽取数据并加载至数仓、数据湖及AI应用；支持自托管与云服务。</div>
-        <div class="news-takeaway"><strong>KEY TAKEAWAY：</strong>KEY TAKEAWAY：AI数据栈仍需稳定连接器与增量同步，先解决数据可达与治理。</div>
+        <div class="news-title">SeemSeam/claude_codex_bridge</div>
+        <div class="news-desc"><strong>核心功能：</strong>面向Codex、Claude、Gemini、Kimi、Qwen、Cursor、Copilot等编码代理的可视化多智能体CLI工作区，支持混合调用与协同。</div>
+        <div class="news-takeaway"><strong>KEY TAKEAWAY：</strong>KEY TAKEAWAY：多代理编排应统一工作区、权限与可观测性，降低模型切换和协作成本。</div>
       </article>
 
       <article class="news-card">
         <div class="card-meta">
-          <span class="chip chip-purple">Agent Harness / 长任务</span>
-          <span class="chip chip-orange">Star 85.2k</span>
+          <span class="chip chip-purple">通用Agent</span>
+          <span class="chip chip-orange">Star 262.5k</span>
         </div>
-        <div class="news-title">bytedance/deer-flow</div>
-        <div class="news-desc"><strong>核心功能：</strong>开源长周期SuperAgent框架，组合沙箱、记忆、工具、技能、子代理与消息网关，可执行研究、编码和创作等分钟至小时级任务。</div>
-        <div class="news-takeaway"><strong>KEY TAKEAWAY：</strong>KEY TAKEAWAY：长任务Agent的关键在运行时隔离、记忆与子代理编排，而非单一提示词。</div>
+        <div class="news-title">NousResearch/hermes-agent</div>
+        <div class="news-desc"><strong>核心功能：</strong>强调随用户成长与长期演化的通用智能体项目，突出记忆、工具使用和能力迭代，适合观察个人助理型Agent的工程范式。</div>
+        <div class="news-takeaway"><strong>KEY TAKEAWAY：</strong>KEY TAKEAWAY：通用Agent竞争点正从单次任务转向长期记忆、权限治理与持续评估。</div>
       </article>
 
       <article class="news-card">
         <div class="card-meta">
-          <span class="chip chip-purple">Agent框架/类型安全</span>
-          <span class="chip chip-orange">Star 21.1k</span>
+          <span class="chip chip-purple">视频编辑MCP</span>
+          <span class="chip chip-orange">Star 5.0k</span>
         </div>
-        <div class="news-title">pydantic/pydantic-ai</div>
-        <div class="news-desc"><strong>核心功能：</strong>Python AI开发框架，覆盖Agent、实时语音、图像生成与嵌入，支持多模型与多接口，强调端到端类型安全与工程可维护性。</div>
-        <div class="news-takeaway"><strong>KEY TAKEAWAY：</strong>KEY TAKEAWAY：用类型系统约束模型输入输出，可降低Agent集成与回归测试成本。</div>
+        <div class="news-title">kajisho5/ffmpeg-skill</div>
+        <div class="news-desc"><strong>核心功能：</strong>为编码智能体提供42个FFmpeg工具的本地视频编辑器，具备机器可读契约与MCP服务器，支持剪辑、字幕、重构、响度和平台导出。</div>
+        <div class="news-takeaway"><strong>KEY TAKEAWAY：</strong>KEY TAKEAWAY：把专业CLI封装为MCP，可让Agent低门槛接管音视频生产流水线并保留本地可控性。</div>
       </article>
 
       <!-- 第三板块：国内与全球社交热点 (微博 / 知乎 / 抖音 / TikTok 聚合) -->
@@ -428,11 +429,29 @@
       
       <article class="news-card">
         <div class="card-meta">
-          <span class="chip chip-green">数据源未覆盖</span>
-          <span style="font-size: 11px; color: var(--text-muted);">N/A</span>
+          <span class="chip chip-orange">微博</span>
+          <span style="font-size: 11px; color: var(--text-muted);">TOP 1（130.0万）</span>
         </div>
-        <div class="news-title">暂无社交平台一手数据</div>
-        <div class="news-desc">本次输入仅含乌兹别克斯坦资讯与GitHub项目，未提供微博、知乎、抖音或TikTok热搜数据，故不生成推测性社交热点，避免误判。建议接入热榜API后补充。</div>
+        <div class="news-title">张雪冠军车拍卖款不再捐给韩红基金会</div>
+        <div class="news-desc">该话题围绕张雪冠军车拍卖款去向变化引发讨论，核心涉及公益承诺、捐赠对象调整与公众信任。舆论关注款项最终用途及信息披露透明度。</div>
+      </article>
+
+      <article class="news-card">
+        <div class="card-meta">
+          <span class="chip chip-blue">知乎</span>
+          <span style="font-size: 11px; color: var(--text-muted);">TOP 1（571万热度）</span>
+        </div>
+        <div class="news-title">山姆现20元一包泡面，含肉量60克以上，只能下锅煮不能开水泡，被吐槽太贵不方便，你怎么看？觉得值吗？</div>
+        <div class="news-desc">话题聚焦高端商超方便面定价与便利性，20元单包且需下锅煮等设定引发“贵且不便”讨论，折射消费分层与渠道选品逻辑，也考验品牌对场景需求的解释力。</div>
+      </article>
+
+      <article class="news-card">
+        <div class="card-meta">
+          <span class="chip chip-green">推特</span>
+          <span style="font-size: 11px; color: var(--text-muted);">TOP 1（热度上升中）</span>
+        </div>
+        <div class="news-title">WANDA</div>
+        <div class="news-desc">“WANDA”进入推特全球趋势但输入数据未提供事件说明，表明相关讨论短时集中升温；建议用英文关键词与权威账号交叉核验后再判断趋势属性。</div>
       </article>
 
       <!-- 第四板块：双语精进与语法精析 -->
@@ -447,13 +466,13 @@
           <span class="lang-label"><span class="chip chip-blue" style="font-size:11px; letter-spacing:0.5px;">UZBEK</span> 实用乌兹语</span>
           <span class="chip chip-blue">职场口语 / 协作</span>
         </div>
-        <div class="lang-sentence">Toshkent aeroportida yangi telefonlarni bojxona rasmiylashtirish vaqtincha to‘xtatildi.</div>
-        <div class="lang-trans">中文翻译：塔什干机场暂时暂停了新手机的海关清关手续。</div>
+        <div class="lang-sentence">Toshkent aeroportida yangi telefonlar uchun bojxona rasmiylashtiruvi vaqtincha to‘xtatildi.</div>
+        <div class="lang-trans">中文翻译：塔什干机场暂停了新手机的海关手续。</div>
         
         <div class="lang-block">
           <div class="lang-block-title">语法拆解 · GRAMMAR BREAKDOWN</div>
           <div class="grammar-content">
-            <strong>地点状语：</strong><code>Toshkent aeroportida</code> 中 <code>-da</code> 表示“在……”，相当于“在塔什干机场”。<strong>宾格：</strong><code>yangi telefonlarni</code> 中 <code>-ni</code> 标记动作对象“新手机们”。<strong>复合名词：</strong><code>bojxona rasmiylashtirish</code> 表示“海关清关/海关手续”。<strong>被动过去时：</strong><code>to‘xtatildi</code> 由 <code>to‘xtat-</code>“停止”加被动过去时构成，表示“被暂停了”。
+            <strong>Toshkent aeroportida</strong> 是地点状语，<code>-da</code> 表“在”；<strong>yangi telefonlar uchun</strong> 中 <code>uchun</code> 表“为了/对于”；<strong>bojxona rasmiylashtiruvi</strong> 是“海关手续”复合名词；<strong>vaqtincha to‘xtatildi</strong> 为“被暂时停止”，<code>to‘xtatildi</code> 是被动过去时。
           </div>
         </div>
 
@@ -465,11 +484,10 @@
             </thead>
             <tbody>
               <tr><td class="vocab-word">aeroport</td><td>名词</td><td>机场</td></tr>
-<tr><td class="vocab-word">telefon</td><td>名词</td><td>手机；电话</td></tr>
 <tr><td class="vocab-word">bojxona</td><td>名词</td><td>海关</td></tr>
-<tr><td class="vocab-word">rasmiylashtirish</td><td>名词</td><td>办理；手续</td></tr>
+<tr><td class="vocab-word">rasmiylashtirish</td><td>名词</td><td>办理/手续</td></tr>
 <tr><td class="vocab-word">vaqtincha</td><td>副词</td><td>暂时地</td></tr>
-<tr><td class="vocab-word">to‘xtatildi</td><td>动词</td><td>被暂停了</td></tr>
+<tr><td class="vocab-word">to‘xtatmoq</td><td>动词</td><td>停止</td></tr>
 
             </tbody>
           </table>
@@ -482,13 +500,13 @@
           <span class="lang-label"><span class="chip chip-purple" style="font-size:11px; letter-spacing:0.5px;">ENGLISH</span> 商务英语</span>
           <span class="chip chip-purple">商务沟通 / 进度对齐</span>
         </div>
-        <div class="lang-sentence">Before routing more context to the LLM, we compress tool outputs at the gateway to keep token costs and latency in check.</div>
-        <div class="lang-trans">中文翻译：在将更多上下文送入大模型之前，我们在网关层压缩工具输出，以控制token成本与延迟。</div>
+        <div class="lang-sentence">Customs clearance for new handsets at Tashkent airport has been temporarily suspended pending further review.</div>
+        <div class="lang-trans">中文翻译：塔什干机场新手机的海关清关已被暂时暂停，等待进一步审查。</div>
 
         <div class="lang-block">
           <div class="lang-block-title">句型与用法解析 · USAGE & STRUCTURE</div>
           <div class="grammar-content">
-            <strong>时间状语：</strong><code>Before routing more context to the LLM</code> 使用 <code>before + doing</code>，表示“在……之前”。<strong>核心动作：</strong><code>we compress tool outputs at the gateway</code> 中 <code>at the gateway</code> 表示“在网关层”。<strong>目的状语：</strong><code>to keep ... in check</code> 表示“控制住……”，其中 <code>keep sth in check</code> 是地道表达。
+            <strong>has been temporarily suspended</strong> 是现在完成被动语态，强调暂停已完成且持续影响；<code>pending</code> 作介词表示“等待……期间/直至”；<strong>for new handsets</strong> 说明暂停对象。
           </div>
         </div>
 
@@ -499,11 +517,11 @@
               <tr><th>词汇 / 短语</th><th>音标</th><th>词性</th><th>商务释义与场景</th></tr>
             </thead>
             <tbody>
-              <tr><td class="vocab-word">route</td><td style="color:#64748B; font-family:serif;">/ruːt/</td><td>动词</td><td>路由；发送</td></tr>
-<tr><td class="vocab-word">context</td><td style="color:#64748B; font-family:serif;">/ˈkɒntekst/</td><td>名词</td><td>上下文；语境</td></tr>
-<tr><td class="vocab-word">compress</td><td style="color:#64748B; font-family:serif;">/kəmˈpres/</td><td>动词</td><td>压缩</td></tr>
-<tr><td class="vocab-word">gateway</td><td style="color:#64748B; font-family:serif;">/ˈɡeɪtweɪ/</td><td>名词</td><td>网关</td></tr>
-<tr><td class="vocab-word">latency</td><td style="color:#64748B; font-family:serif;">/ˈleɪtənsi/</td><td>名词</td><td>延迟</td></tr>
+              <tr><td class="vocab-word">customs clearance</td><td style="color:#64748B; font-family:serif;">/ˈkʌstəmz ˈklɪərəns/</td><td>名词短语</td><td>海关清关</td></tr>
+<tr><td class="vocab-word">handset</td><td style="color:#64748B; font-family:serif;">/ˈhændset/</td><td>名词</td><td>手机/手持设备</td></tr>
+<tr><td class="vocab-word">suspend</td><td style="color:#64748B; font-family:serif;">/səˈspend/</td><td>动词</td><td>暂停</td></tr>
+<tr><td class="vocab-word">pending</td><td style="color:#64748B; font-family:serif;">/ˈpendɪŋ/</td><td>介词</td><td>等待；直至</td></tr>
+<tr><td class="vocab-word">review</td><td style="color:#64748B; font-family:serif;">/rɪˈvjuː/</td><td>名词</td><td>审查</td></tr>
 
             </tbody>
           </table>
@@ -514,7 +532,7 @@
 
     <div class="footer-bar">
       <strong>天机 · 每日简报 (Tashkent Briefing)</strong><br>
-      生成时间：2026-11-11 08:10 (Asia/Tashkent) · 数据源自 Open-Meteo / CBU / Kun.uz / GitHub / 全网热搜
+      生成时间：2026-11-11 09:01 (Asia/Tashkent) · 数据源自 Open-Meteo / CBU / Kun.uz / GitHub / 全网热搜
     </div>
 
     <div class="copy-btn-bar">
